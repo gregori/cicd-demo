@@ -19,7 +19,7 @@ jobs:
           java --version
       - name: 'Assemble JAR'
         run: |
-          ./gradlew assemble
+          sh gradlew assemble
       - name: 'Get Version Number'
         run: |
           echo "::set-env name=VERSION::$(./gradlew properties -q | grep "version:" | awk '{print $2}')"
